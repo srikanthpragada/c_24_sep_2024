@@ -13,7 +13,7 @@ void main()
     scanf("%d",&price);
 
     amount = qty * price;
-    discount =  15.0 / 100 * amount;
+    discount =  amount * 15 / 100;
 
     net_amount = amount - discount;
 
