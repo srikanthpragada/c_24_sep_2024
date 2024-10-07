@@ -1,4 +1,4 @@
-// Program to take 5 numbers and display sum
+// Program to take 10 numbers or until 0 is given and display sum
 
 #include <stdio.h>
 
