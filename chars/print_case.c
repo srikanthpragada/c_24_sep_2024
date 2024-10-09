@@ -7,9 +7,9 @@ void main()
  char ch;
 
      printf("Enter Alphabet :");
-     scanf("%c", &ch);
+     ch = getchar();
 
-     if(ch >= 65 && ch <= 90)
+     if(ch >= 'A' && ch <= 'Z')
         printf("Uppercase");
      else
         printf("Lowercase");
