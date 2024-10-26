@@ -5,9 +5,10 @@ void main()
 {
  FILE * fp;
 
-      fp = open("test.txt", "wt");
+      fp = fopen("test.txt", "wt");  // write text
 
-      // write
+      // write to file
+      fprintf(fp, "Hello!!");
 
       fclose(fp);
 }
