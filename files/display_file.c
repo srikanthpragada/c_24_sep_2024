@@ -1,24 +1,27 @@
+// Take filename on command-line and display its contents
+
 #include <stdio.h>
 
 
-void main()
+void main(int argc, char * argv[])
 {
  FILE * fp;
- char filename[30];
  char line[100];
  char * p;
  int lineno = 1;
 
+      if(argc < 2)
+      {
+          printf("Sorry! Missing filename. Please provide filename on command-line!\n");
+          printf(">display_file  <filename>");
+          exit(2);
+      }
 
-
-      printf("Enter filename :");
-      gets(filename);
-
-      fp = fopen(filename, "rt");
+      fp = fopen(argv[1], "rt");
 
       if(fp == NULL)
       {
-          printf("Sorry! Could not open file!");
+          printf("Sorry! Could not open file [%s]", argv[1]);
           exit(1);
       }
 
